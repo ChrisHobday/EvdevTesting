@@ -1,17 +1,14 @@
-{-# LANGUAGE LambdaCase #-}
 module Main (main) where
 
 import Control.Monad ( forever )
-import System.Environment ( getArgs )
 import qualified Data.ByteString.Char8 as BS
 
 import Evdev
 
 -- Creates a new device from the RawFilePath "/dev/input/event21", which on my system is an Xbox controller, prints information about the device and then prints any events created by it forever
-
 main :: IO ()
 main = do
-  dev <- newDevice (BS.pack "/dev/input/event21")
+  dev <- newDevice (BS.pack "/dev/input/by-id/usb-Logitech_USB_Receiver-if02-event-mouse")
 
   devName <- deviceName dev
   devProps <- deviceProperties dev

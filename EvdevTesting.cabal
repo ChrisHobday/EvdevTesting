@@ -36,7 +36,7 @@ library
   build-depends:
       base >=4.7 && <5
     , bytestring
-    , evdev
+    , evdev >=2.3.1.1
   default-language: Haskell2010
 
 executable EvdevTesting-exe
@@ -52,7 +52,7 @@ executable EvdevTesting-exe
       EvdevTesting
     , base >=4.7 && <5
     , bytestring
-    , evdev
+    , evdev >=2.3.1.1
   default-language: Haskell2010
 
 test-suite EvdevTesting-test
@@ -69,5 +69,5 @@ test-suite EvdevTesting-test
       EvdevTesting
     , base >=4.7 && <5
     , bytestring
-    , evdev
+    , evdev >=2.3.1.1
   default-language: Haskell2010
